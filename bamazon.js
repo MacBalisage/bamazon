@@ -16,9 +16,9 @@ connection.connect(function(err){
 })
 
 var makeTable = function(){
-    connection.query("SELECT*FROM products",function(err,res){
+    connection.query("SELECT * FROM products",function(err,res){
         for(var i=0; i<res.length; i++){
-            console.log(res[i].itemId+"||"+res[i].productName+"||"+res[i].departmentName+"||"+res[i].price+"||"+res[i].stockQuantity+"\n");
+            console.log(res[i].itemid+"||"+res[i].productname+"||"+res[i].departmentname+"||"+res[i].price+"||"+res[i].stockquantity+"\n");
         }
     promptCustomer(res);    
     })
